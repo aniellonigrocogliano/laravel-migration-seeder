@@ -42,7 +42,7 @@
     @endif
     @if (!$Trains->cancellato)
         <td>
-            <p class="text-success">Attivo</p>
+
         </td>
     @else
         <td>

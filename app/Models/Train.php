@@ -12,6 +12,6 @@ class Train extends Model
 
     public function orario()
     {
-        return Carbon::today()->gte(Carbon::parse($this->orario_partenza));
+        return !(Carbon::today()->gte(Carbon::parse($this->orario_partenza)));
     }
 }
