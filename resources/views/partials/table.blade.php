@@ -26,13 +26,27 @@
     <td>{{ $partenza->format('d-m-Y H:i:s') }}</td>
     <td>{{ $durata->format('%H:%I:%S') }}</td>
     @if ($Trains->in_orario)
-        <td><i class="text-success fa-solid fa-check"></i></td>
+        @if (!$Trains->cancellato)
+            <td>
+                <p class="text-success">In orario</p>
+            </td>
+        @else
+            <td>
+                <p class="text-danger">Cancellato</p>
+            </td>
+        @endif
     @else
-        <td> <i class="text-danger fa-solid fa-xmark"></i></td>
+        <td>
+            <p class="text-danger">In ritardo</p>
+        </td>
     @endif
     @if (!$Trains->cancellato)
-        <td><i class="text-success fa-solid fa-check"></i></td>
+        <td>
+            <p class="text-success">Attivo</p>
+        </td>
     @else
-        <td> <i class="text-danger fa-solid fa-xmark"></i></td>
+        <td>
+            <p class="text-danger">Cancellato</p>
+        </td>
     @endif
 </tr>
