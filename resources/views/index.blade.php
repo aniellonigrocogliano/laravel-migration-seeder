@@ -19,7 +19,9 @@
             </thead>
             <tbody>
                 @foreach ($Trains as $Trains)
-                    @include('partials.table')
+                    @if ($Trains->orario())
+                        @include('partials.table')
+                    @endif
                 @endforeach
             </tbody>
         </table>
