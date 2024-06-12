@@ -17,7 +17,7 @@ class TrainsTableSeeder extends Seeder
         $faker = Faker::create('it_IT');
         $stazioni = ['Roma Termini', 'Milano Centrale', 'Venezia Santa Lucia', 'Firenze Santa Maria Novella', 'Napoli Centrale', 'Torino Porta Nuova', 'Bologna Centrale', 'Genova Piazza Principe', 'Verona Porta Nuova', 'Palermo Centrale', 'Bari Centrale', 'Catania Centrale', 'Padova', 'Pisa Centrale', 'Trieste Centrale', 'Ancona', 'Reggio Calabria Centrale', 'Messina Centrale', 'Salerno', 'Pescara Centrale', 'Perugia', 'Livorno Centrale', 'Trento', 'Bolzano', 'La Spezia Centrale'];
 
-        for ($i = 0; $i < 50; $i++) {
+        for ($i = 0; $i < 100; $i++) {
             $stazione_partenza = $faker->randomElement($stazioni);
 
             do {
